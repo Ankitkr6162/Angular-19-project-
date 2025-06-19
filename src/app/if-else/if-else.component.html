@@ -1,0 +1,28 @@
+<h1>If Else | Control Flow</h1>
+
+<button (click)="hidediv()">Hide Div</button>
+<button (click)="showDiv()">Show Div</button>
+<button (click)="toggleDiv()">Toggle Div</button>
+
+
+@if (display) {
+<div style="width: 100px; height: 100px; background-color: magenta;">
+
+</div>
+}
+
+<hr>
+
+<button (click)="toggleTwoDivs()">{{toggleTwoDiv ? 'show silver' : 'show gold'}}</button>
+
+@if (toggleTwoDiv) {
+<div style="width: 100px; height: 100px; background-color: gold;">
+
+</div>
+}
+
+@else{
+<div style="width: 100px; height: 100px; background-color: silver;">
+
+</div>
+}
