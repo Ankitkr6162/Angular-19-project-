@@ -1,0 +1,100 @@
+** Can we create variable directly into the class ? 
+
+No we cannot we need to create a function within the class then we can create a variable. 
+
+eg - :  here age is variable and title, position are property. 
+   export class AppComponent {
+  title = 'Hello Ankit Kumar Singh';
+  position = 'Java developer';
+  function (){
+  let age = 20;
+}
+
+** What is package.json file ? 
+
+The package.json file in an Angular project (or any Node.js-based project) is a metadata file that defines:
+The project’s name, version, and scripts (run, build , test).
+A list of dependencies and devDependencies.
+It also defines the project structure. 
+
+** Difference between dependencies and devDependencies in package.json file ? 
+
+dependencies
+These are the packages your application needs at runtime.
+They are essential when the app is built, deployed, and running.
+
+devDependencies
+Used only in development, testing, and build tools.
+They are not needed in production.
+
+**Difference between tsconfig.json and tsconfig.app.json file ?
+
+
+**What is tsconfig.json
+Acts as the base config for all TypeScript builds in the project.
+Includes Echema script version.
+Includes global compiler options.
+Other configs (like tsconfig.app.json, tsconfig.spec.json) extend this.
+
+
+**What is tsconfig.app.json
+Configures only the application source code (src/app, main.ts, etc.).
+Used by Angular CLI when you run ng serve, ng build, etc.
+Typically excludes tests, e2e, and node_modules.
+
+**What is tsconfig.spec.json?
+
+tsconfig.spec.json is for compiling test files.
+It's used only when running tests (ng test).
+It includes only *.spec.ts files and test-related TypeScript settings.
+It extends the main tsconfig.json, just like tsconfig.app.json.
+
+** What is angular.json file ?
+
+angular.json controls how Angular CLI builds, serves, and tests your app.
+It connects build tools with your source files and configurations (tsconfig.app.json, index.html, etc.).
+It’s automatically managed by the CLI, but you can customize it if needed.
+
+** What is interpolation ?
+It displays data from TS to HTML file.
+Executes JS code in html file.
+Symbol is {{}}
+But it has some limitations. (we cannot declare variable in interpolation, we cannot increament 
+or decreament any variable, we cannot directly use loops for this we need to use ng-repeat).
+
+** How to decide where we have write and code the associated ts and html file ?
+So we have  [templateUrl: './app.component.html'] ,  defined in ts file which defines the associated html file. 
+
+** What is Angular CLI ?
+Angular CLI (command Line Interface) is a tool that helps developers to create, 
+build,test, and deploy the Angular application. 
+To install Angular CLI we have to run npm install -g @angular/cli in cmd. 
+
+** What is components in Angular ?
+Components are the building block of angular applications. They are responsible for managing a portion of the user
+interface and its associated logic. It is mainly consists of four parts :-
+TypeScript file, Html File, Css File and test(spec) file (for test cases).
+
+We run 'ng generate component component-name' to create a new component, it gets created within our app folder.
+
+** How to use one component into another component?
+
+First we create a new component using the "ng generate component component-name" command.
+We will have the ts, html and css file of the component, Then we write the code and then in another component ts file 
+ imports: [LoginComponent], we import that component into the another component, we have to use the selector tag <app-login></app-login>
+ into the component where we are injecting the other component. 
+ 
+ 
+** How to use button click event in Angular ?
+<button (click)="handleClickEvent()">Click Me</button>
+Here handleClickEvent is function which handles the button click event. 
+
+
+** What is Events in Angular ?
+Angular utilizes event binding to enable dynamic interactions within web applications. This mechanism allows developers to connect user actions, 
+such as clicks, keystrokes, and mouse movements, to methods defined in the component class. 
+Eg- click, mouseleave, mouseenter, input, blur, focus etc.
+
+**How to load multiple css file in one component ?
+In the ts file we can add styleUrls array which can take mutiple css files to load this in one component.
+ 
