@@ -1,0 +1,20 @@
+<h1>For loop Contextual Variable</h1>
+@for (item of users; track users) {
+    
+<!-- 
+    @if($first || $last){
+        <h3  style="background-color: greenyellow;">This is our {{$index+1}}th user and name is {{item}}</h3>
+    }@else{
+        <h3  style="background-color: gold;">This is our {{$index+1}}th user and name is {{item}}</h3>
+    } -->
+
+    
+    @if($odd){
+        <h3  style="background-color: red;">This is our {{$index}}th user and name is {{item}}</h3>
+    }@if($even){
+        <h3  style="background-color: blueviolet;">This is our {{$index}}th user and name is {{item}}</h3>
+    }
+}
+@empty {
+    <h3>No Record Found</h3>
+}

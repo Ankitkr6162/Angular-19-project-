@@ -7,6 +7,12 @@ import { GetsetinputfieldComponent } from './getsetinputfield/getsetinputfield.c
 import { StyleoptionsComponent } from './styleoptions/styleoptions.component';
 import { IfElseComponent } from './if-else/if-else.component';
 import { ElseIfComponent } from './else-if/else-if.component';
+import { SwitchCaseComponent } from './switch-case/switch-case.component';
+import { ForLoopComponent } from './for-loop/for-loop.component';
+import { SignalsComponent } from './signals/signals.component';
+import { ContextualVariableComponent } from './contextual-variable/contextual-variable.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +23,13 @@ import { ElseIfComponent } from './else-if/else-if.component';
        GetsetinputfieldComponent,
       StyleoptionsComponent,
     IfElseComponent,
-    ElseIfComponent],
+    ElseIfComponent,
+  SwitchCaseComponent,
+ForLoopComponent,
+SignalsComponent,
+ContextualVariableComponent,
+TwoWayBindingComponent,
+DynamicStylingComponent],
     
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

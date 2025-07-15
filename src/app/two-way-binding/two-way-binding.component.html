@@ -1,0 +1,21 @@
+<h1>Two Data Binding</h1>
+
+<input [(ngModel)]="name" type="text" placeholder="Enter your data">
+
+<h2>{{name}}</h2>
+<hr>
+
+<h2>Todo List App</h2>
+<input type="text" placeholder="Enter your new task" [(ngModel)]="task">
+<button (click)="addTask()">Add your Task</button>
+
+@for (item of taskList; track item.id) {
+    <ul class="task-list">
+        <li>{{item.id}}</li>
+        <li>{{item.task}}</li>
+        <li><button (click)="deleteTask(item.id)">Delete this Task</button></li>
+
+
+    </ul>
+}
+

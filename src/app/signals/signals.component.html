@@ -1,0 +1,22 @@
+<h1>Signals in Angular</h1>
+
+<button (click)="updateValue('dec')">Decrement Signal</button>
+<h2>{{count()}}</h2>
+<button (click)="updateValue('inc')">Increament Signal</button>
+<hr>
+
+<h2>Datatypes and updating Signals</h2>
+<h2>{{data()}}</h2>
+<button (click)="updateSignal()">updateSignal</button>
+<hr>
+
+<h2>Computed Signals</h2>
+<button (click)="showValue()">Show Computed Signal Value</button>
+<hr>
+
+<h2>Effect in Angular</h2>
+<h3>{{countNum()}}</h3>
+<button (click)="toggleValue()">Update Value</button>
+@if(displayHeading){
+    <h2 style="background-color: gold;">Page Heading</h2>
+}

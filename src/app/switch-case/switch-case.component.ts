@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class SwitchCaseComponent {
 
+  color = 'red';
+
+  handleColor(val:string){
+    this.color = val;
+  }
+
+  changeColor(event:Event){
+    this.color = (event.target as HTMLInputElement).value
+  }
 }

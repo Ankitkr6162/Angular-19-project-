@@ -1,0 +1,8 @@
+<h1>Dynamic Styling in Angular</h1>
+
+<h2 [style.backgroundColor]="bgColor"
+    [style.fontSize.px]="fontSize"
+>This is the heading for Dynamic Styling</h2>
+
+<h2 [style.fontSize]="zoom? headingSizeBig:headingSizeSmall">Change Heading Size</h2>
+<button (click)="updateHeadingSize()">Change Heading Size </button>
