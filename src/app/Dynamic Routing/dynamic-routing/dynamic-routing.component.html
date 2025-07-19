@@ -1,0 +1,9 @@
+<h1>Dynamic Routing in Angular</h1>
+
+<h2>User List</h2>
+
+<ul>
+    @for (item of users; track item.id) {
+    <li><a routerLink="user/{{item.id}}/{{item.name}}">{{item.name}}</a></li>
+}
+</ul>

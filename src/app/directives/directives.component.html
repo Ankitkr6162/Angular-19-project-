@@ -1,0 +1,48 @@
+<h1>Directives in Angular</h1>
+
+<h2>*ngIf Directive</h2>
+
+<h2 *ngIf="ShowHeading">This is Directive Heading</h2>
+<button (click)="showHeadingButton()">Show Heading</button>
+
+<hr>
+
+<h2 *ngIf="block == 0">Heading 0</h2>
+<h2 *ngIf="block == 1">Heading 1</h2>
+<h2 *ngIf="block == 2">Heading 2</h2>
+<button (click)="headingButton()">Heading Button</button>
+
+
+<h2>*ngFor Directive</h2>
+
+<ul>
+    <li *ngFor="let student of students">
+        <h3>{{student}}</h3>
+    </li>
+</ul>
+<hr>
+
+<ul>
+    <li *ngFor="let data of studentData">
+        <h3>{{data.name}}, {{data.age}}, {{data.gender}}</h3>
+    </li>
+</ul>
+<hr>
+
+<h2>*ngSwitch Directive</h2>
+
+<button (click)="changeColor('red')">Red Color</button>
+<button (click)="changeColor('green')">Green Color</button>
+<button (click)="changeColor('violet')">Violet Color</button>
+<button (click)="changeColor('gold')">Gold Color</button>
+<button (click)="changeColor('no color')">No Color</button>
+
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h1>
+    <h1 *ngSwitchCase="'green'" style="background-color: green;">Green Color</h1>
+    <h1 *ngSwitchCase="'violet'" style="background-color: violet;">Violet Color</h1>
+    <h1 *ngSwitchCase="'gold'" style="background-color: gold;">Gold Color</h1>
+    <h1 *ngSwitchDefault="''">No Color</h1>
+
+</div>

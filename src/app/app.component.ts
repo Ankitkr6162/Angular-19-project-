@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { CounterComponent } from './counter/counter.component';
 import { EventComponent } from './event/event.component';
@@ -13,23 +13,30 @@ import { SignalsComponent } from './signals/signals.component';
 import { ContextualVariableComponent } from './contextual-variable/contextual-variable.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DynamicStylingComponent } from './dynamic-styling/dynamic-styling.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { HeaderComponent } from "./Routing/header/header.component";
+import { DynamicRoutingComponent } from './Dynamic Routing/dynamic-routing/dynamic-routing.component';
+import { ReactiveFormsComponent } from './Forms in Angular/reactive-forms/reactive-forms.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [ RouterOutlet, 
+  imports: [RouterOutlet,
     ProfileComponent,
-     CounterComponent,
-      EventComponent,
-       GetsetinputfieldComponent,
-      StyleoptionsComponent,
+    CounterComponent,
+    EventComponent,
+    GetsetinputfieldComponent,
+    StyleoptionsComponent,
     IfElseComponent,
     ElseIfComponent,
-  SwitchCaseComponent,
-ForLoopComponent,
-SignalsComponent,
-ContextualVariableComponent,
-TwoWayBindingComponent,
-DynamicStylingComponent],
+    SwitchCaseComponent,
+    ForLoopComponent,
+    SignalsComponent,
+    ContextualVariableComponent,
+    TwoWayBindingComponent,
+    DynamicStylingComponent,
+    DirectivesComponent, RouterOutlet,
+    HeaderComponent, DynamicRoutingComponent, ReactiveFormsComponent],
     
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
